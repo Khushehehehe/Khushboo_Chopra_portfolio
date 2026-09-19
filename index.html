@@ -231,6 +231,12 @@
             color: #6f7890;
             font-size: 16px;
         }
+        .project-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
         .project-content {
             padding: 28px;
@@ -559,22 +565,24 @@
                 <div class="project-card">
 
                     <div class="project-image">
-                        Power BI Dashboard Preview
-                    </div>
+    <video controls>
+        <source src="customer-behavior-demo.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+</div>
 
                     <div class="project-content">
 
-                        <h3>Uber Ride Analytics</h3>
+                        <h3>Customer Behavior Analysis</h3>
 
                         <div class="project-tech">
-                            Power BI · SQL · Excel
+                            Power BI · SQL · Excel · Python · Data Analysis
                         </div>
 
                         <p>
-                            An interactive analytics dashboard
-                            exploring ride bookings, cancellations,
-                            revenue, ride distance and vehicle
-                            performance.
+                            An interactive customer behavior dashboard analyzing
+                            customer demographics, subscription status, sales,
+                            revenue and purchasing patterns.
                         </p>
 
                         <div class="project-buttons">
