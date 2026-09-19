@@ -403,7 +403,111 @@
             transform: translateY(-2px);
         }
 
+/* =========================
+   RESEARCH & PUBLICATIONS
+========================= */
 
+#research {
+    padding: 120px 8%;
+    border-top: 1px solid #1c2333;
+}
+
+#research h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+
+#research h2 span {
+    color: #8b9cff;
+}
+
+.research-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 35px;
+    background: #101521;
+    border: 1px solid #242c3d;
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-6px);
+    border-color: #8b9cff;
+}
+
+.research-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #171e2d;
+    border-radius: 12px;
+    font-size: 30px;
+}
+
+.research-content {
+    flex: 1;
+}
+
+.research-content h3 {
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.research-authors {
+    color: #8b9cff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.research-description {
+    color: #8f99ad;
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 800px;
+    margin-bottom: 18px;
+}
+
+.research-meta {
+    color: #6f7890;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.research-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.research-btn {
+    padding: 11px 18px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-research {
+    background: #8b9cff;
+    color: #0b0f19;
+}
+
+.secondary-research {
+    border: 1px solid #394155;
+    color: white;
+}
+
+.research-btn:hover {
+    transform: translateY(-2px);
+}
 
         /* =========================
            CONTACT
@@ -1303,7 +1407,80 @@
     </section>
 
 
+<!-- =========================
+     RESEARCH & PUBLICATIONS
+========================= -->
 
+<section id="research">
+
+    <div class="section-container">
+
+        <p class="section-label">
+            RESEARCH & PUBLICATIONS
+        </p>
+
+        <h2>
+            Research I've
+            <span>contributed to.</span>
+        </h2>
+
+        <div class="research-card">
+
+            <div class="research-icon">
+                📄
+            </div>
+
+            <div class="research-content">
+
+                <h3>
+                    Automated EEG Analysis for Harmful Brain Activity Classification
+                </h3>
+
+                <p class="research-authors">
+                    Shalini Gambhir · Disha Gusain · Khushboo Chopra · Anmol Gulati
+                </p>
+
+                <p class="research-description">
+                    Research on automated EEG analysis for detecting and classifying
+                    harmful brain activity, particularly seizure-related patterns,
+                    using machine learning and CNN-based models including VGG16,
+                    ResNet and EfficientNet.
+                </p>
+
+                <div class="research-meta">
+                    Springer Nature · 2025
+                </div>
+
+                <div class="research-buttons">
+
+                    <a
+                        href="automated-eeg-analysis-research-paper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="research-btn primary-research">
+
+                        📖 View Research Paper
+
+                    </a>
+
+                    <a
+                        href="automated-eeg-analysis-research-paper.pdf"
+                        download
+                        class="research-btn secondary-research">
+
+                        ↓ Download PDF
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- =========================
          CONTACT
     ========================= -->
