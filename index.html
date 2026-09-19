@@ -197,6 +197,95 @@
                 grid-template-columns: 1fr;
             }
         }
+                #projects {
+            padding: 120px 8%;
+            border-top: 1px solid #1c2333;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: #101521;
+            border: 1px solid #242c3d;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #8b9cff;
+        }
+
+        .project-image {
+            height: 230px;
+            background: #171e2d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6f7890;
+            font-size: 16px;
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .project-tech {
+            color: #8b9cff;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .project-content p {
+            color: #8f99ad;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .project-btn {
+            padding: 10px 17px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .demo-btn {
+            background: #8b9cff;
+            color: #0b0f19;
+        }
+
+        .github-btn {
+            border: 1px solid #394155;
+            color: white;
+        }
+
+        .project-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 800px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -368,7 +457,113 @@
 
         </div>
 
+       </section>
+
+
+    <section id="projects">
+
+        <div class="section-container">
+
+            <p class="section-label">FEATURED PROJECTS</p>
+
+            <h2>
+                Projects I've
+                <span>worked on.</span>
+            </h2>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        Power BI Dashboard Preview
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Uber Ride Analytics</h3>
+
+                        <div class="project-tech">
+                            Power BI · SQL · Excel
+                        </div>
+
+                        <p>
+                            An interactive analytics dashboard
+                            exploring ride bookings, cancellations,
+                            revenue, ride distance and vehicle
+                            performance.
+                        </p>
+
+                        <div class="project-buttons">
+
+                            <a href="#"
+                               class="project-btn demo-btn">
+                                ▶ Live Demo
+                            </a>
+
+                            <a href="#"
+                               class="project-btn github-btn">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        Excel Dashboard Preview
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>Sales Analytics Dashboard</h3>
+
+                        <div class="project-tech">
+                            Excel · Pivot Tables · Data Analysis
+                        </div>
+
+                        <p>
+                            An interactive Excel dashboard designed
+                            to analyse sales performance, trends,
+                            products and business KPIs.
+                        </p>
+
+                        <div class="project-buttons">
+
+                            <a href="#"
+                               class="project-btn demo-btn">
+                                ▶ Live Demo
+                            </a>
+
+                            <a href="#"
+                               class="project-btn github-btn">
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
     </section>
+
 
 </body>
 </html>
