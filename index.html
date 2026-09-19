@@ -846,13 +846,47 @@
                         Excel Dashboard Preview
                     </div>
 
-                    <div class="project-content">
+                 <div class="project-card">
 
-                        <h3>Sales Analytics Dashboard</h3>
+    <div class="project-image" onclick="openOlaDemo()">
+    <img src="OLA-dash.png"
+         alt="OLA Ride Analytics Power BI Dashboard">
+</div>
 
-                        <div class="project-tech">
-                            Excel · Pivot Tables · Data Analysis
-                        </div>
+    <div class="project-content">
+
+        <h3>OLA Ride Analytics</h3>
+
+        <div class="project-tech">
+            SQL · Power BI · Data Analysis
+        </div>
+
+        <p>
+            An interactive OLA ride analytics dashboard analyzing
+            booking performance, cancellations, vehicle types,
+            ride distance, customer behavior, ratings and revenue.
+        </p>
+
+        <div class="project-buttons">
+
+            <a href="#"
+               class="project-btn demo-btn"
+               onclick="openOlaDemo(); return false;">
+                ▶ Live Demo
+            </a>
+
+            <a href="https://github.com/Khushehehehe/Khushboo_Chopra_portfolio"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-btn github-btn">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
                         <p>
                             An interactive Excel dashboard designed
@@ -996,7 +1030,31 @@
         </video>
 
     </div>
+<div id="olaDemoModal" class="demo-modal">
 
+    <div class="demo-modal-content">
+
+        <button class="close-demo" onclick="closeOlaDemo()">×</button>
+
+        <h2>OLA Ride Analytics</h2>
+
+        <p class="demo-subtitle">
+            Interactive Power BI Dashboard Demo
+        </p>
+
+        <video id="olaDemoVideo" controls playsinline>
+
+            <source
+                src="ola-ride-analytics-demo.mp4"
+                type="video/mp4">
+
+            Your browser does not support the video.
+
+        </video>
+
+    </div>
+
+</div>
 </div>
 <script>
 
@@ -1027,7 +1085,23 @@
 
     }
 
+function openOlaDemo() {
+    const modal = document.getElementById("olaDemoModal");
+    const video = document.getElementById("olaDemoVideo");
 
+    modal.style.display = "flex";
+    video.currentTime = 0;
+    video.play();
+}
+
+function closeOlaDemo() {
+    const modal = document.getElementById("olaDemoModal");
+    const video = document.getElementById("olaDemoVideo");
+
+    video.pause();
+    video.currentTime = 0;
+    modal.style.display = "none";
+}
     document.getElementById("demoModal").addEventListener("click", function(event) {
 
         if (event.target === this) {
