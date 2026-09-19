@@ -371,6 +371,79 @@
                 grid-template-columns: 1fr;
             }
         }
+               .demo-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            inset: 0;
+            background: rgba(5, 8, 15, 0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .demo-modal-content {
+            position: relative;
+            width: min(1000px, 95vw);
+            background: #101521;
+            border: 1px solid #394155;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .demo-modal-content h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .demo-subtitle {
+            color: #8b9cff;
+            margin-bottom: 25px;
+        }
+
+        .demo-modal-content video {
+            width: 100%;
+            max-height: 70vh;
+            display: block;
+            border-radius: 10px;
+            background: #000;
+        }
+
+        .close-demo {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: #242c3d;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .close-demo:hover {
+            background: #8b9cff;
+            color: #0b0f19;
+        }
+
+        @media (max-width: 700px) {
+
+            .demo-modal {
+                padding: 12px;
+            }
+
+            .demo-modal-content {
+                padding: 20px;
+            }
+
+            .demo-modal-content h2 {
+                font-size: 22px;
+            }
+        } 
     </style>
 </head>
 
@@ -588,14 +661,17 @@
                         <div class="project-buttons">
 
                             <a href="#"
-                               class="project-btn demo-btn">
-                                ▶ Live Demo
-                            </a>
+   class="project-btn demo-btn"
+   onclick="openDemo(); return false;">
+    ▶ Live Demo
+</a>
 
-                            <a href="#"
-                               class="project-btn github-btn">
-                                GitHub
-                            </a>
+                            <a href="https://github.com/Khushehehehe/Khushboo_Chopra_portfolio"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="project-btn github-btn">
+    GitHub
+</a>
 
                         </div>
 
@@ -737,7 +813,71 @@
     © 2026 Khushboo Chopra · Data Analyst Portfolio
 
 </footer>
+<div id="demoModal" class="demo-modal">
+
+    <div class="demo-modal-content">
+
+        <button class="close-demo" onclick="closeDemo()">
+            ×
+        </button>
+
+        <h2>Customer Behavior Analysis</h2>
+
+        <p class="demo-subtitle">
+            Interactive Power BI Dashboard Demo
+        </p>
+
+        <video id="demoVideo" controls playsinline>
+
+            <source
+                src="customer-behavior-demo.mp4"
+                type="video/mp4">
+
+            Your browser does not support the video.
+
+        </video>
+
+    </div>
+
+</div>
+<script>
+
+    function openDemo() {
+
+        const modal = document.getElementById("demoModal");
+        const video = document.getElementById("demoVideo");
+
+        modal.style.display = "flex";
+
+        video.currentTime = 0;
+
+        video.play();
+
+    }
 
 
+    function closeDemo() {
+
+        const modal = document.getElementById("demoModal");
+        const video = document.getElementById("demoVideo");
+
+        video.pause();
+
+        video.currentTime = 0;
+
+        modal.style.display = "none";
+
+    }
+
+
+    document.getElementById("demoModal").addEventListener("click", function(event) {
+
+        if (event.target === this) {
+            closeDemo();
+        }
+
+    });
+
+</script>
 </body>
 </html>
