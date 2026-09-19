@@ -48,12 +48,26 @@
         }
 
         .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding: 60px 8%;
-        }
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 60px 8%;
+}
+        .hero-photo-container {
+    flex-shrink: 0;
+}
 
+.hero-photo {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #8b9cff;
+    box-shadow: 0 0 60px rgba(139, 156, 255, 0.25);
+}
         .hero-content {
             max-width: 800px;
         }
@@ -589,7 +603,11 @@
 
 
     <section class="hero">
-
+<div class="hero-photo-container">
+    <img src="photo.jpeg"
+         alt="Khushboo Chopra"
+         class="hero-photo">
+</div>
         <div class="hero-content">
 
             <div class="small-text">
